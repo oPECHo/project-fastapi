@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+
+#1. python3 -m venv blog-env (create blog-env)
+#2. pip3 install -r requirements.txt (use command install)
+#3. source blog-env/bin/activities
+#4. uvicorn blog.main:app --reload (run project)
