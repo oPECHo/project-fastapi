@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, status
 from . import schemas, models, database
 from .database import engine, SessionLocal
 from sqlalchemy.orm import Session
@@ -14,7 +14,7 @@ def get_db():
     finally:
         db.close()
 
-@app.post('/blog', status_code=201)
+@app.post('/blog', status_code=status.HTTP_201_CREATED)
 def create(request: schemas.Blog, db : Session = Depends(get_db)):
     new_blog = models.Blog(title=request.title, body=request.body)
     db.add(new_blog)
