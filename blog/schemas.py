@@ -10,3 +10,9 @@ class ShowBlog(BaseModel):
     body: str
     class Config():
         orm_mode = True
+
+
+class User(BaseModel):
+    username:str
+    email:str
+    password:str
