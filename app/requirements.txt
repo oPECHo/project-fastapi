@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+passlib
+bcrypt
+python-jose
+python-multipart
+
+#1. python3 -m venv blog-env (create blog-env)
+#2. pip3 install -r requirements.txt (use command install)
+#3. source blog-env/bin/activities
+#4. uvicorn blog.main:app --reload (run project)
+
+#* http://127.0.0.1:8000/docs
+#* http://127.0.0.1:8000/redoc
+
+# Deploy with Deta [ https://blog_app-1-r5068082.deta.app/docs ]
